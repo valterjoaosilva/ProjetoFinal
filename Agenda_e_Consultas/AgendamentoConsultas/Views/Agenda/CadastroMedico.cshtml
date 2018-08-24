@@ -1,0 +1,22 @@
+﻿
+@{
+    List<SelectListItem> medicos = new List<SelectListItem>();
+    medicos.Add(new SelectListItem { Text = "Dirceu", Value = "0" });
+    medicos.Add(new SelectListItem { Text = "Valter", Value = "1" });
+    Layout = null;
+   
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CadastroMedico</title>
+</head>
+<body>
+    <div>
+        <h1>medicos</h1>
+        @Html.DropDownList("Médicos", medicos, "Escolha seu médico");
+    </div>
+</body>
+</html>
