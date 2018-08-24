@@ -3,8 +3,21 @@
     List<SelectListItem> medicos = new List<SelectListItem>();
     medicos.Add(new SelectListItem { Text = "Dirceu", Value = "0" });
     medicos.Add(new SelectListItem { Text = "Valter", Value = "1" });
+
+    List<SelectListItem> especialidades = new List<SelectListItem>();
+    especialidades.Add(new SelectListItem { Text = "Pediatria", Value = "0" });
+    especialidades.Add(new SelectListItem { Text = "Cardiologia", Value = "1" });
+    especialidades.Add(new SelectListItem { Text = "Urologia", Value = "2" });
+    especialidades.Add(new SelectListItem { Text = "Ortopedista", Value = "3" });
+
+    List<SelectListItem> convenio = new List<SelectListItem>();
+    convenio.Add(new SelectListItem { Text = "Unimed", Value = "0" });
+    convenio.Add(new SelectListItem { Text = "Agmed", Value = "1" });
+    convenio.Add(new SelectListItem { Text = "Life", Value = "2" });
+    convenio.Add(new SelectListItem { Text = "Bradesco", Value = "3" });
     Layout = null;
-   
+}
+
 
 <!DOCTYPE html>
 
@@ -15,8 +28,18 @@
 </head>
 <body>
     <div>
-        <h1>medicos</h1>
-        @Html.DropDownList("Médicos", medicos, "Escolha seu médico");
+        <h2>Medicos</h2>
+        @Html.DropDownList("Médicos", medicos, "Escolha seu médico")
+    </div>
+    <hr />
+    <div>
+        <h2>Especialidades</h2>
+        @Html.DropDownList("Especialidades", especialidades, "Escolha a Especialidade")
+    </div>
+    <hr />
+    <div>
+       <h2>Convenio</h2>
+        @Html.DropDownList("Convenio", convenio, "Escolha o Convenio")
     </div>
 </body>
 </html>

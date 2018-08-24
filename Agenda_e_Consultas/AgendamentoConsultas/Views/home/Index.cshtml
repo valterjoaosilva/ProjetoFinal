@@ -1,10 +1,7 @@
 ﻿
 @{
 
-    List<SelectListItem> medicos = new List<SelectListItem>();
-    medicos.Add(new SelectListItem {Text = "Dirceu", Value = "0" });
-    medicos.Add(new SelectListItem { Text = "Valter", Value = "1" });
-    Layout = null;
+ Layout = null;
 }
 
 <!DOCTYPE html>
@@ -25,8 +22,6 @@
         <button>Logar</button>
         <button>Cadastrar</button>
 
-        <h1>medicos</h1>
-        @Html.DropDownList("Médicos", medicos, "Escolha seu médico");
     </div>
 </body>
 </html>

@@ -9,7 +9,7 @@ namespace AgendamentoConsultas.Controllers
     public class AgendaController : Controller
     {
         // GET: Agenda
-        public ActionResult Index()
+        public ActionResult CadastroMedico()
         {
             return View();
         }
