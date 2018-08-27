@@ -97,6 +97,14 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CadastroPaciente\bootstrap.min.css" />
+    <Content Include="Content\CadastroPaciente\bootstrap.min.js" />
+    <Content Include="Content\CadastroPaciente\jquery-1.11.1.min.js" />
+    <Content Include="Content\Consulta\bootstrap.bundle.min.js" />
+    <Content Include="Content\Consulta\bootstrap.min.css" />
+    <Content Include="Content\Consulta\bootstrap.min.js" />
+    <Content Include="Content\Consulta\jquery-3.3.1.min.js" />
+    <Content Include="Content\Consulta\jquery.min.js" />
     <Content Include="dist\css\bootstrap-grid.css" />
     <Content Include="dist\css\bootstrap-grid.min.css" />
     <Content Include="dist\css\bootstrap-reboot.css" />
@@ -158,6 +166,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AgendaController.cs" />
+    <Compile Include="Controllers\CadastroAcessoController.cs" />
+    <Compile Include="Controllers\ConsultasController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\TesteLayoutController.cs" />
     <Compile Include="Global.asax.cs">
@@ -184,6 +194,8 @@
     <Content Include="Views\TesteLayout\Index.cshtml" />
     <Content Include="Views\home\Index.cshtml" />
     <Content Include="Views\Agenda\CadastroMedico.cshtml" />
+    <Content Include="Views\CadastroAcesso\CadastroAcessoIndex.cshtml" />
+    <Content Include="Views\Consultas\ConsultaIndex.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
