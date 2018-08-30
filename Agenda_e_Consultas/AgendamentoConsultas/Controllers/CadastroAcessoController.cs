@@ -13,5 +13,12 @@ namespace AgendamentoConsultas.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Cadastrar()
+        {
+            int i = 1;
+            return View();
+        }
     }
 }
