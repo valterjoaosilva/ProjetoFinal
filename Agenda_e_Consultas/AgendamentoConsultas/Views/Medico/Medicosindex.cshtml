@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Medicosindex</title>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Especialidade</th>
+                    <th>Convenio</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var medico in ViewBag.Medicos)
+                {
+                    <tr>
+                        <td>@medico.Id</td>
+                        <td>@medico.Nome</td>
+                        <td>@medico.Especialidade</td>
+                        <td>@medico.Convenio</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
