@@ -247,7 +247,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AgendaController.cs" />
     <Compile Include="Controllers\CadastroAcessoController.cs" />
-    <Compile Include="Controllers\ConsultasController.cs" />
     <Compile Include="Controllers\EspecialidadeController.cs" />
     <Compile Include="DAO\EspecialidadesDAO.cs" />
     <Compile Include="Controllers\homeController.cs" />
@@ -296,7 +295,6 @@
     <Content Include="Views\home\Index.cshtml" />
     <Content Include="Views\Agenda\CadastroMedico.cshtml" />
     <Content Include="Views\CadastroAcesso\CadastroAcessoIndex.cshtml" />
-    <Content Include="Views\Consultas\ConsultaIndex.cshtml" />
     <Content Include="Views\Medico\Medicosindex.cshtml" />
     <Content Include="Views\Medico\Form.cshtml" />
     <Content Include="Views\Medico\Adiciona.cshtml" />
