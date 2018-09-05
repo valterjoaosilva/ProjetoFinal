@@ -10,6 +10,7 @@ namespace AgendamentoConsultas.DAO
     public class ClinicaContext : DbContext
     {
         public DbSet<Medico> Medicos { get; set; }
+        public DbSet<Especialidade> Especialidades { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

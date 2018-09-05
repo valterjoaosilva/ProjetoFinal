@@ -1,43 +1,42 @@
-﻿using AgendamentoConsultas.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using AgendamentoConsultas.Models;
 
 namespace AgendamentoConsultas.DAO
 {
-    public class MedicosDAO
+    internal class EspecialidadesDAO
     {
-        public void Adiciona(Medico medico)
+        public void Adiciona(Especialidade especialidade)
         {
             using (var context = new ClinicaContext())
             {
-                context.Medicos.Add(medico);
+                context.Especialidades.Add(especialidade);
                 context.SaveChanges();
             }
 
 
         }
-        public IList<Medico> Lista()
+        public IList<Especialidade> Lista()
         {
             using (var contexto = new ClinicaContext())
             {
-                return contexto.Medicos.ToList();
+                return contexto.Especialidades.ToList();
             }
         }
-        public void Atualiza(Medico medico)
+        public void Atualiza(Especialidade especialidade)
         {
             using (var contexto = new ClinicaContext())
             {
-                contexto.Update(medico);
+                contexto.Update(especialidade);
                 contexto.SaveChanges();
             }
         }
-        public Medico BuscaPorId(int id)
+        public Especialidade BuscaPorId(int id)
         {
             using (var contexto = new ClinicaContext())
             {
-                return contexto.Medicos.Where(p => p.Id == id).FirstOrDefault();
+                return contexto.Especialidades.Where(p => p.Id == id).FirstOrDefault();
             }
         }
     }

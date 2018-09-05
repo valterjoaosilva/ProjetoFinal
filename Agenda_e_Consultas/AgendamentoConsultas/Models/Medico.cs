@@ -12,6 +12,7 @@ namespace AgendamentoConsultas.Models
         public Especialidade Especialidade { get; set; }
         public String Convenio { get; set; }
         public int EspecialidadeId { get; set; }
+        public String Descricao { get; set; }
         
 
     }

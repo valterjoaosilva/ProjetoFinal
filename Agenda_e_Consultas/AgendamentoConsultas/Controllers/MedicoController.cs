@@ -12,10 +12,26 @@ namespace AgendamentoConsultas.Controllers
         // GET: Medico
         public ActionResult Medicosindex()
         {
-            MedicosDAO dao = new MedicosDAO();            
-            ViewBag.Medicos = dao.Lista();            
+            MedicosDAO dao = new MedicosDAO();
+            ViewBag.Medicos = dao.Lista();
             return View();
 
+        }
+        public ActionResult Form()
+        {
+            EspecialidadesDAO especialidadesDAO = new EspecialidadesDAO();
+            IList<Especialidade> especialidades = especialidadesDAO.Lista();
+            ViewBag.Especialidades = especialidades;
+            return View();
+        }
+        public ActionResult Adiciona(Medico medico)
+        {
+                       
+            MedicosDAO dao = new MedicosDAO();
+            dao.Adiciona(medico);
+
+            return RedirectToAction("Index", "Medico");
+            
         }
     }
 }

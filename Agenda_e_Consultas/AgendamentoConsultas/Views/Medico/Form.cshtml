@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+</head>
+<body>
+    <div> 
+        <form action="/Medico/Adiciona">
+            <label for="nome">Nome:</label>
+            <input id="nome" name="medico.Nome" />
+
+            <label for="especialidade">Especialidade:</label>
+            <select id="especialidade" name="produto.EspecialidadeId">
+                @foreach (var especialidade in ViewBag.Especialidades)
+                {
+                    <option value="@especialidade.Id">@especialidade.Nome</option>
+                }
+                
+            </select>
+
+            <label for="convenio">Convenio:</label>
+            <input id="convenio" name="medico.Convenio" />
+
+            <label for="convenio">Descricao:</label>
+            <input id="convenio" name="medico.Descricao" />
+
+            <input type="submit" value="Cadastrar" />
+
+        </form>
+    </div>
+</body>
+</html>

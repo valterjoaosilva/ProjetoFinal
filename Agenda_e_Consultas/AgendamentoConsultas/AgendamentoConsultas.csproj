@@ -248,6 +248,8 @@
     <Compile Include="Controllers\AgendaController.cs" />
     <Compile Include="Controllers\CadastroAcessoController.cs" />
     <Compile Include="Controllers\ConsultasController.cs" />
+    <Compile Include="Controllers\EspecialidadeController.cs" />
+    <Compile Include="DAO\EspecialidadesDAO.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\MedicoController.cs" />
     <Compile Include="Controllers\TesteLayoutController.cs" />
@@ -259,6 +261,14 @@
     <Compile Include="Migrations\20180903203557_tabelas.cs" />
     <Compile Include="Migrations\20180903203557_tabelas.designer.cs">
       <DependentUpon>20180903203557_tabelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180904191302_Descricao.cs" />
+    <Compile Include="Migrations\20180904191302_Descricao.designer.cs">
+      <DependentUpon>20180904191302_Descricao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180905190910_especialidades.cs" />
+    <Compile Include="Migrations\20180905190910_especialidades.designer.cs">
+      <DependentUpon>20180905190910_especialidades.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ClinicaContextModelSnapshot.cs" />
     <Compile Include="Models\Medico.cs" />
@@ -288,6 +298,9 @@
     <Content Include="Views\CadastroAcesso\CadastroAcessoIndex.cshtml" />
     <Content Include="Views\Consultas\ConsultaIndex.cshtml" />
     <Content Include="Views\Medico\Medicosindex.cshtml" />
+    <Content Include="Views\Medico\Form.cshtml" />
+    <Content Include="Views\Medico\Adiciona.cshtml" />
+    <Content Include="Views\Especialidade\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
