@@ -11,7 +11,7 @@ namespace AgendamentoConsultas.DAO
     {
         public DbSet<Medico> Medicos { get; set; }
         public DbSet<Especialidade> Especialidades { get; set; }
-
+        public DbSet<Convenio> Convenios { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = ClinicaDB; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");

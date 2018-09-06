@@ -25,11 +25,12 @@ namespace AgendamentoConsultas.Models
         public string telefone { get; set; }
         [MaxLength(13)]
         public string celular { get; set; }
-        public string conveniomedico { get; set; }
+        public string convenioid { get; set; }
+        public Convenio Convenio { get; set; }
         public string Email { get; set; }
         public string senha { get; set; }
         public string confirmarsenha { get; set; }
-        public String Convenio { get; set; }
+       
        
 
     }

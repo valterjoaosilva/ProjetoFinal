@@ -250,6 +250,7 @@
     <Compile Include="Controllers\EspecialidadeController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="DAO\ConvenioDAO.cs" />
     <Compile Include="DAO\EspecialidadesDAO.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\MedicoController.cs" />
@@ -271,6 +272,7 @@
       <DependentUpon>20180905190910_especialidades.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ClinicaContextModelSnapshot.cs" />
+    <Compile Include="Models\Convenio.cs" />
     <Compile Include="Models\Medico.cs" />
     <Compile Include="Models\Especialidade.cs" />
     <Compile Include="Models\Paciente.cs" />
@@ -296,7 +298,7 @@
     <Content Include="Views\TesteLayout\Index.cshtml" />
     <Content Include="Views\home\Index.cshtml" />
     <Content Include="Views\Agenda\CadastroMedico.cshtml" />
-    <Content Include="Views\CadastroAcesso\CadastroAcessoIndex.cshtml" />
+    <Content Include="Views\Paciente\Index.cshtml" />
     <Content Include="Views\Medico\Medicosindex.cshtml" />
     <Content Include="Views\Medico\Form.cshtml" />
     <Content Include="Views\Medico\Adiciona.cshtml" />
@@ -311,7 +313,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Paciente\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

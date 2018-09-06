@@ -13,5 +13,14 @@ namespace AgendamentoConsultas.Controllers
         {
             return View();
         }
+        public ActionResult Adiciona(Medico medico)
+        {
+
+            MedicosDAO dao = new MedicosDAO();
+            dao.Adiciona(medico);
+
+            return RedirectToAction("Index", "Medico");
+
+        }
     }
 }
