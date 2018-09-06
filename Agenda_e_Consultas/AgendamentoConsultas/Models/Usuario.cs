@@ -14,6 +14,8 @@ namespace AgendamentoConsultas.Models
         [MaxLength(11)]
         public string Cpf { get; set; }
         public string Senha { get; set; }
+
+        public bool Atendente { get; set; }
         
 
         //rg, endereco

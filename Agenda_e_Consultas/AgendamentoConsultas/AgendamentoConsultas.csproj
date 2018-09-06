@@ -251,7 +251,6 @@
     <Compile Include="DAO\EspecialidadesDAO.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\MedicoController.cs" />
-    <Compile Include="Controllers\TesteLayoutController.cs" />
     <Compile Include="DAO\ClinicaContext.cs" />
     <Compile Include="DAO\MedicosDAO.cs" />
     <Compile Include="Global.asax.cs">
@@ -272,6 +271,7 @@
     <Compile Include="Migrations\ClinicaContextModelSnapshot.cs" />
     <Compile Include="Models\Medico.cs" />
     <Compile Include="Models\Especialidade.cs" />
+    <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
