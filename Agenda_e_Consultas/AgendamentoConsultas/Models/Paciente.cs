@@ -29,7 +29,6 @@ namespace AgendamentoConsultas.Models
         public string Email { get; set; }
         public string senha { get; set; }
         public string confirmarsenha { get; set; }
-
         public String Convenio { get; set; }
        
 

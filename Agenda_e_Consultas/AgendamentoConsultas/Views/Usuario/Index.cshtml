@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <form action="/Usuario/Adiciona" method="post">
+            <label for="nome">Nome:</label>
+            <input id="nome" name="usuario.NomeUsusario" />
+
+            <label for="cpf">Cpf:</label>
+            <input id="cpf" name="usuario.CpfUsuario" />
+
+            <label for="senha">Senha:</label>
+            <input id="senha" name="usuario.SenhaUsuario" />
+
+            <label for="atendente">Atendente:</label>
+            <input id="atendente" name="usuario.AtendenteUsuario" />
+            
+            <input type="submit" value=" Cadastrar" />
+
+        </form>
+    </div>
+</body>
+</html>
