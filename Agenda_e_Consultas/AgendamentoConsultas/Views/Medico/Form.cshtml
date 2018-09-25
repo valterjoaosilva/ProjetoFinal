@@ -17,19 +17,17 @@
             <input id="nome" name="medico.Nome" />
 
             <label for="especialidade">Especialidade:</label>
-            <select id="especialidade" name="produto.EspecialidadeId">
+            <select id="especialidade" name="Medico.EspecialidadeId">
                 @foreach (var especialidade in ViewBag.Especialidades)
                 {
-                    <option value="@especialidade.Id">@especialidade.Nome</option>
+                    <option value="@especialidade.Id">@especialidade.EspecialidadeNome</option>
                 }
                 
             </select>
+                   
 
-            <label for="convenio">Convenio:</label>
-            <input id="convenio" name="medico.Convenio" />
-
-            <label for="convenio">Descricao:</label>
-            <input id="convenio" name="medico.Descricao" />
+            <label for="descricao">Descricao:</label>
+            <input id="descricao" name="medico.Descricao" />
 
             <input type="submit" value="Cadastrar" />
 

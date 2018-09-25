@@ -1,8 +1,20 @@
 ﻿<link href="~/Content/CadastroPaciente/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="~/Content/CadastroPaciente/bootstrap.min.js"></script>
 <script src="~/Content/CadastroPaciente/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+<!-- jvectormap -->
+<link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+     folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
 <!------ Include the above in your HEAD tag ---------->
-<form class="form-horizontal">
+<form class="form-horizontal" action="@Url.Action("Index","Paciente")" method="post">
     <fieldset>
         <!-- Form Name -->
         <legend>Cadastro de Pacientes</legend>
@@ -11,23 +23,15 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="nome">Nome</label>
             <div class="col-md-5">
-                <input id="nome" name="nome" type="text" placeholder="Entre com o Nome" class="form-control input-md" required="">
-
+                <input id="nome" name="paciente.nome" type="text" placeholder="Entre com o Nome" class="form-control input-md" required="">
             </div>
         </div>
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="identificacao">Nome de usuário</label>
-            <div class="col-md-5">
-                <input id="identificacao" name="identificacao" type="text" placeholder="Digite seu nome de usuário" class="form-control input-md" required="">
 
-            </div>
-        </div>
         <!-- Text input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="cpf">CPF</label>
             <div class="col-md-5">
-                <input id="cpf" name="cpf" type="text" placeholder="Numero do CPF" class="form-control input-md">
+                <input id="cpf" name="paciente.cpf" type="text" placeholder="Numero do CPF" class="form-control input-md">
 
             </div>
         </div>
@@ -35,7 +39,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="datanascimento">Data de Nascimento</label>
             <div class="col-md-4">
-                <input id="datanascimento" name="datanascimento" type="text" placeholder="dd/mm/yyyy" class="form-control input-md">
+                <input id="datanascimento" name="paciente.datanascimento" type="text" placeholder="dd/mm/yyyy" class="form-control input-md">
 
             </div>
         </div>
@@ -43,7 +47,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="sexo">Sexo</label>
             <div class="col-md-4">
-                <select id="sexo" name="sexo" class="form-control">
+                <select id="sexo" name="paciente.sexo" class="form-control">
                     <option value="F">Feminino</option>
                     <option value="M">Masculino</option>
                 </select>
@@ -53,7 +57,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="cep">CEP</label>
             <div class="col-md-4">
-                <input id="cep" name="cep" type="text" placeholder="99999-999" class="form-control input-md">
+                <input id="cep" name="paciente.cep" type="text" placeholder="99999-999" class="form-control input-md">
 
             </div>
         </div>
@@ -61,7 +65,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="endereco">Endereco</label>
             <div class="col-md-8">
-                <input id="endereco" name="endereco" type="text" placeholder="Rua Numero Complemento" class="form-control input-md">
+                <input id="endereco" name="paciente.endereco" type="text" placeholder="Rua Numero Complemento" class="form-control input-md">
 
             </div>
         </div>
@@ -69,7 +73,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="bairro">Bairro</label>
             <div class="col-md-5">
-                <input id="bairro" name="bairro" type="text" placeholder="Bairro" class="form-control input-md">
+                <input id="bairro" name="paciente.bairro" type="text" placeholder="Bairro" class="form-control input-md">
 
             </div>
         </div>
@@ -77,16 +81,14 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="complemento">Complemento</label>
             <div class="col-md-5">
-                <input id="Complemento" name="complemento" type="text" placeholder="Complemento" class="form-control input-md">
-
+                <input id="Complemento" name="paciente.complemento" type="text" placeholder="Complemento" class="form-control input-md">
             </div>
-
         </div>
         <!-- Text input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="cidade">Cidade</label>
             <div class="col-md-6">
-                <input id="cidade" name="cidade" type="text" placeholder="Cidade" class="form-control input-md">
+                <input id="cidade" name="paciente.cidade" type="text" placeholder="Cidade" class="form-control input-md">
 
             </div>
         </div>
@@ -94,15 +96,14 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="uf">UF</label>
             <div class="col-md-2">
-                <input id="uf" name="uf" type="text" placeholder="Estado" class="form-control input-md">
-
+                <input id="uf" name="paciente.uf" type="text" placeholder="Estado" class="form-control input-md">
             </div>
         </div>
         <!-- Text input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="telefone">Telefone</label>
             <div class="col-md-4">
-                <input id="telefone" name="telefone" type="text" placeholder="(99)999999999" class="form-control input-md">
+                <input id="telefone" name="paciente.telefone" type="text" placeholder="(99)999999999" class="form-control input-md">
 
             </div>
         </div>
@@ -118,24 +119,16 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="convenio médico">Convenio Medico</label>
             <div class="col-md-4">
+                <select id="conveniomedico" name="paciente.convenioIdMedico" type="text" placeholder="Digite Convenio Medico" class="form-control">
+                    @*@{
+                            foreach (var convenio in ViewBag.Convenios)
+                            {
+                                <option value="@convenio.Id">@convenio.convenioNome</option>
+                            }
+                        }*@
 
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">
-                    Unimed <label>
-                        </br>
-                        <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                        <label class="form-check-label" for="exampleCheck1">
-                            Bradesco <label>
-                                <!--
-                            <select id="conveniomedico" name="convenio Medico" type="text" placeholder="Digite Convenio Medico" class="form-control">
-                                <option value="1">Unimed</option>
-                                <option value="2">Bradesco</option>
-                                <option value="3">Agemed</option>
-                                <option value="4">Amil</option>
-                                <option value="5">Onehealth</option>
-                                <option value="6">CaixaSeguros</option>
-                            </select>
-                            -->
+                </select>
+
             </div>
         </div>
         <!-- Text input-->
@@ -171,4 +164,12 @@
         </div>
         <button type="submit" class="btn btn-primary">Primary</button>
     </fieldset>
+
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.4.0
+        </div>
+        <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+        reserved.
+    </footer>
 </form>
