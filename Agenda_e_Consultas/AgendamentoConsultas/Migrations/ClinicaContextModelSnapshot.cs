@@ -52,8 +52,6 @@ namespace AgendamentoConsultas.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Convenio");
-
                     b.Property<string>("Descricao");
 
                     b.Property<int>("EspecialidadeId");

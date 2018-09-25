@@ -5,7 +5,7 @@ using AgendamentoConsultas.Models;
 
 namespace AgendamentoConsultas.DAO
 {
-    internal class EspecialidadesDAO
+    public class EspecialidadesDAO
     {
         public void Adiciona(Especialidade especialidade)
         {

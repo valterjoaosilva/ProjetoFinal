@@ -30,7 +30,7 @@ namespace AgendamentoConsultas.Controllers
             MedicosDAO dao = new MedicosDAO();
             dao.Adiciona(medico);
 
-            return RedirectToAction("Index", "Medico");
+            return RedirectToAction("Medicosindex", "Medico");
             
         }
     }

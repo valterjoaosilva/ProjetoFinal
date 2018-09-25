@@ -1,6 +1,8 @@
 ﻿
 @{
     Layout = null;
+    AgendamentoConsultas.DAO.EspecialidadesDAO dao = new AgendamentoConsultas.DAO.EspecialidadesDAO();
+    ViewBag.Especialidades = dao.Lista();
 }
 
 <!DOCTYPE html>
@@ -18,7 +20,6 @@
                     <th>Id</th>
                     <th>Nome</th>
                     <th>Especialidade</th>
-                    <th>Convenio</th>
                     <th>Descricao</th>
                 </tr>
             </thead>
@@ -28,8 +29,16 @@
                     <tr>
                         <td>@medico.Id</td>
                         <td>@medico.Nome</td>
-                        <td>@medico.Especialidade</td>
-                        <td>@medico.Convenio</td>
+                        
+                            @foreach (var espec in ViewBag.Especialidades)
+                            {
+                                if(espec.Id == medico.EspecialidadeId)
+                                {
+                                    <td>
+                                        @espec.EspecialidadeNome
+                                    </td>    
+                                }
+                            }                                                
                         <td>@medico.Descricao</td>
                     </tr>
                 }
