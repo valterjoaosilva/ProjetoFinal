@@ -1,0 +1,26 @@
+﻿
+<form  action="@Url.Action("Editar","Medico", new { ViewBag.Medico.Id })" method="post">
+
+    <label>Nome:</label>
+    <br />
+    <input id="nome" class="form-control" value="@ViewBag.Medico.Nome" name="medico.Nome" />
+
+    <label for="especialidade">Especialidade:</label>
+    <select id="especialidade" class="form-control" name="medico.EspecialidadeId">
+        @foreach (var especialidade in ViewBag.Especialidades)
+        {
+            if (especialidade.Id == ViewBag.Medico.EspecialidadeId)
+            {
+                <option value="@especialidade.Id" selected>@especialidade.EspecialidadeNome</option>
+            }
+            <option value="@especialidade.Id">@especialidade.EspecialidadeNome</option>
+        }
+
+    </select>
+    <label for="descricao">Descricao:</label>
+    <textarea id="descricao" class="form-control" name="medico.Descricao">@ViewBag.Medico.Descricao</textarea>
+    <br />
+    <input class="btn" type="submit" value="Atualizar" />
+
+</form>
+

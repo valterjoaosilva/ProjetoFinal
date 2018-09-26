@@ -1,20 +1,12 @@
 ﻿
 @{
-    Layout = null;
+    
     AgendamentoConsultas.DAO.EspecialidadesDAO dao = new AgendamentoConsultas.DAO.EspecialidadesDAO();
     ViewBag.Especialidades = dao.Lista();
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Medicosindex</title>
-</head>
-<body>
     <div>
-        <table>
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -26,24 +18,29 @@
             <tbody>
                 @foreach (var medico in ViewBag.Medicos)
                 {
-                    <tr>
-                        <td>@medico.Id</td>
-                        <td>@medico.Nome</td>
-                        
-                            @foreach (var espec in ViewBag.Especialidades)
-                            {
-                                if(espec.Id == medico.EspecialidadeId)
-                                {
-                                    <td>
-                                        @espec.EspecialidadeNome
-                                    </td>    
-                                }
-                            }                                                
-                        <td>@medico.Descricao</td>
-                    </tr>
+                <tr>
+                    <td>@medico.Id</td>
+                    <td>@medico.Nome</td>
+
+                    @foreach (var espec in ViewBag.Especialidades)
+                    {
+                        if (espec.Id == medico.EspecialidadeId)
+                        {
+                            <td>
+                                @espec.EspecialidadeNome
+                            </td>
+                        }
+                    }
+                    <td>@medico.Descricao</td>
+                    <td>
+                        <a href="@Url.Action("ViewEditar", "Medico", new { medico.Id })">Editar</a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Remover", "Medico", new { medico.Id })">Remover</a>
+                    </td>
+                </tr>
                 }
             </tbody>
         </table>
     </div>
-</body>
-</html>
+

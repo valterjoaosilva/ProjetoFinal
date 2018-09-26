@@ -39,5 +39,13 @@ namespace AgendamentoConsultas.DAO
                 return contexto.Especialidades.Where(p => p.Id == id).FirstOrDefault();
             }
         }
+        public void Remover(Especialidade especialidade)
+        {
+            using (var contexto = new ClinicaContext())
+            {
+                contexto.Especialidades.Remove(especialidade);
+                contexto.SaveChanges();
+            }
+        }
     }
 }

@@ -1,0 +1,13 @@
+﻿
+
+<form action="@Url.Action("Editar", "Especialidade", new { ViewBag.Especialidade.Id })" method="post">
+    <label for="especialidade">Especialidade:</label>
+    <input id="especialidade" class="form-control" value="@ViewBag.Especialidade.EspecialidadeNome" name="especialidade.EspecialidadeNome" />
+
+    <label for="descricao">Descricao:</label>
+    <textarea id="descricao" class="form-control" name="especialidade.DescricaoEspecialidade">@ViewBag.Especialidade.DescricaoEspecialidade</textarea>
+
+    <input type="submit" value=" Cadastrar" />
+
+</form>
+

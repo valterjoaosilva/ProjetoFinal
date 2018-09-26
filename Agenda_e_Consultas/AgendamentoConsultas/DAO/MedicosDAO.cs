@@ -40,5 +40,13 @@ namespace AgendamentoConsultas.DAO
                 return contexto.Medicos.Where(p => p.Id == id).FirstOrDefault();
             }
         }
+        public void Remover(Medico medico)
+        {
+            using (var contexto = new ClinicaContext())
+            {
+                contexto.Medicos.Remove(medico);
+                contexto.SaveChanges();
+            }
+        }
     }
 }

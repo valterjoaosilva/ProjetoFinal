@@ -14,14 +14,17 @@ namespace AgendamentoConsultas.Controllers
         public ActionResult Index()
         {
             EspecialidadesDAO dao = new EspecialidadesDAO();
-            ViewBag.Especialidade = dao.Lista();
+            ViewBag.Especialidades = dao.Lista();
+            
             return View();
         }
         
        
         public ActionResult Form()
         {
-            
+            EspecialidadesDAO dao = new EspecialidadesDAO();
+            ViewBag.Especialidade = dao.Lista();
+
             return View();
         }
         public ActionResult Adiciona(Especialidade especialidade)
@@ -31,6 +34,40 @@ namespace AgendamentoConsultas.Controllers
 
             return RedirectToAction("Index", "Especialidade");
 
+
         }
+        public ActionResult Remover(int id)
+        {
+
+
+            EspecialidadesDAO dao = new EspecialidadesDAO();
+            Especialidade especialidade = dao.BuscaPorId(id);
+            dao.Remover(especialidade);
+
+            return RedirectToAction("index", "Especialidade");
+        }
+
+        public ActionResult ViewEditar(int id)
+        {
+            EspecialidadesDAO dao = new EspecialidadesDAO();           
+            
+            ViewBag.Especialidade = dao.BuscaPorId(id);
+
+            return View();
+        }
+
+        public ActionResult Editar(int id, Medico medico)
+        {
+            MedicosDAO dao = new MedicosDAO();
+
+            Medico med = dao.BuscaPorId(id);
+            med.Nome = medico.Nome;
+            med.EspecialidadeId = medico.EspecialidadeId;
+            med.Descricao = medico.Descricao;
+
+            dao.Atualiza(med);
+            return RedirectToAction("Medicosindex", "Medico");
+        }
+
     }
 }

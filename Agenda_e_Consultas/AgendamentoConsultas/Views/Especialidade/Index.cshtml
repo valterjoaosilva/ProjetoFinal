@@ -1,26 +1,29 @@
 ﻿
-@{
-    Layout = null;
-}
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Descricao</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var especialidade in ViewBag.Especialidades)
+            {
+            <tr>
+                <td>@especialidade.Id</td>
+                <td>@especialidade.EspecialidadeNome</td>
+                <td>@especialidade.DescricaoEspecialidade</td>
+                <td>
+                    <a href="@Url.Action("ViewEditar", "Especialidade", new { especialidade.Id })">Editar</a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Remover", "Especialidade", new { especialidade.Id })">Remover</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>EspecialidadeIndex</title>
-</head>
-<body>
-    <div>
-        <form action="/Especialidade/Adiciona" method="post">
-            <label for="especialidade">Especialidade:</label>
-            <input id="especialidade" name="especialidade.EspecialidadeNome" />
-
-            <label for="descricao">Descricao:</label>
-            <textarea id="descricao" name="especialidade.DescricaoEspecialidade"></textarea>
-            <input type="submit" value=" Cadastrar" />
-
-        </form>
-    </div>
-</body>
-</html>
