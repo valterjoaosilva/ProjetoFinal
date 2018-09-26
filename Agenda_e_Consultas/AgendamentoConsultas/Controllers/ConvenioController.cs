@@ -13,10 +13,13 @@ namespace AgendamentoConsultas.Controllers
         // GET: Convenio
         public ActionResult Index()
         {
+            ConvenioDAO dao = new ConvenioDAO();
+            ViewBag.Convenios = dao.Lista();
+
             return View();
         }
 
-        public ActionResult RegistroConvenio()
+        public ActionResult Form()
         {            
             return View();
         }
@@ -27,6 +30,34 @@ namespace AgendamentoConsultas.Controllers
 
             return RedirectToAction("Index", "Convenio");
         }
+        public ActionResult Remover(int id)
+        {
+            ConvenioDAO dao = new ConvenioDAO();
+            Convenio convenio = dao.BuscaPorId(id);
+            dao.Remover(convenio);
 
+            return RedirectToAction("Index", "Convenio");
+        }
+
+
+        public ActionResult ViewEditar(int id)
+        {
+            ConvenioDAO dao = new ConvenioDAO();
+            ViewBag.Convenio = dao.BuscaPorId(id);
+
+            return View();
+        }
+
+        public ActionResult Editar(int id, Convenio convenio)
+        {
+            ConvenioDAO dao = new ConvenioDAO();
+
+            Convenio conv = dao.BuscaPorId(id);
+            conv.ConvenioNome = convenio.ConvenioNome;
+           
+
+            dao.Atualiza(conv);
+            return RedirectToAction("Index", "Convenio");
+        }
     }
 }

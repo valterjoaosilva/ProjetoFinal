@@ -21,7 +21,7 @@ namespace AgendamentoConsultas.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Paciente",
+                name: "Pacientes",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -56,14 +56,14 @@ namespace AgendamentoConsultas.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_Paciente_ConvenioId",
-                table: "Paciente",
+                table: "Pacientes",
                 column: "ConvenioId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Paciente");
+                name: "Pacientes");
 
             migrationBuilder.DropTable(
                 name: "Convenios");

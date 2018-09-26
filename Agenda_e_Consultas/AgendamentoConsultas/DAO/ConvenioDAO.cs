@@ -40,5 +40,13 @@ namespace AgendamentoConsultas.DAO
                 return contexto.Convenios.Where(p => p.Id == id).FirstOrDefault();
             }
         }
+        public void Remover(Convenio convenio)
+        {
+            using (var contexto = new ClinicaContext())
+            {
+                contexto.Convenios.Remove(convenio);
+                contexto.SaveChanges();
+            }
+        }
     }
 }

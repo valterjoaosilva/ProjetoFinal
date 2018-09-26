@@ -1808,11 +1808,13 @@
     <Content Include="Views\Medico\Adiciona.cshtml" />
     <Content Include="Views\Especialidade\Index.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
-    <Content Include="Views\Convenio\RegistroConvenio.cshtml" />
+    <None Include="Views\Convenio\Form.cshtml" />
     <Content Include="Views\Convenio\Index.cshtml" />
     <Content Include="Views\Medico\ViewEditar.cshtml" />
     <Content Include="Views\Especialidade\ViewEditar.cshtml" />
     <Content Include="Views\Especialidade\Form.cshtml" />
+    <Content Include="Views\Paciente\ViewEditar.cshtml" />
+    <Content Include="Views\Convenio\ViewEditar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

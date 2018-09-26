@@ -12,7 +12,7 @@ namespace AgendamentoConsultas.DAO
         {
             using (var context = new ClinicaContext())
             {
-                context.Paciente.Add(paciente);
+                context.Pacientes.Add(paciente);
                 context.SaveChanges();
             }
 
@@ -22,7 +22,7 @@ namespace AgendamentoConsultas.DAO
         {
             using (var contexto = new ClinicaContext())
             {
-                return contexto.Paciente.ToList();
+                return contexto.Pacientes.ToList();
             }
         }
         public void Atualiza(Paciente paciente)
@@ -37,7 +37,15 @@ namespace AgendamentoConsultas.DAO
         {
             using (var contexto = new ClinicaContext())
             {
-                return contexto.Paciente.Where(p => p.Id == id).FirstOrDefault();
+                return contexto.Pacientes.Where(p => p.Id == id).FirstOrDefault();
+            }
+        }
+        public void Remover(Paciente paciente)
+        {
+            using (var contexto = new ClinicaContext())
+            {
+                contexto.Pacientes.Remove(paciente);
+                contexto.SaveChanges();
             }
         }
     }

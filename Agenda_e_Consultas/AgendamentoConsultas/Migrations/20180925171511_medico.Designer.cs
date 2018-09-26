@@ -67,7 +67,7 @@ namespace AgendamentoConsultas.Migrations
                     b.ToTable("Medicos");
                 });
 
-            modelBuilder.Entity("AgendamentoConsultas.Models.Paciente", b =>
+            modelBuilder.Entity("AgendamentoConsultas.Models.Pacientes", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -113,7 +113,7 @@ namespace AgendamentoConsultas.Migrations
 
                     b.HasIndex("ConvenioId");
 
-                    b.ToTable("Paciente");
+                    b.ToTable("Pacientes");
                 });
 
             modelBuilder.Entity("AgendamentoConsultas.Models.Medico", b =>
@@ -124,7 +124,7 @@ namespace AgendamentoConsultas.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("AgendamentoConsultas.Models.Paciente", b =>
+            modelBuilder.Entity("AgendamentoConsultas.Models.Pacientes", b =>
                 {
                     b.HasOne("AgendamentoConsultas.Models.Convenio", "Convenio")
                         .WithMany()

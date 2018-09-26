@@ -1,20 +1,25 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-        <h1>
-            teste
-        </h1>
-    </div>
-</body>
-</html>
+﻿<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Convenio</th>
+               </tr>
+        </thead>
+        <tbody>
+            @foreach (var convenio in ViewBag.Convenios)
+            {
+                <tr>
+                    <td>@convenio.Id</td>
+                    <td>@convenio.ConvenioNome</td>
+                    <td>
+                        <a href="@Url.Action("ViewEditar", "Convenio", new { convenio.Id })">Editar</a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Remover", "Convenio", new { convenio.Id })">Remover</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
