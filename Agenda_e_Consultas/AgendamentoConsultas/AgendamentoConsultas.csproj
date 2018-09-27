@@ -1743,6 +1743,7 @@
     <Compile Include="Controllers\CadastroAcessoController.cs" />
     <Compile Include="Controllers\ConvenioController.cs" />
     <Compile Include="Controllers\EspecialidadeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="DAO\ConvenioDAO.cs" />
@@ -1824,6 +1825,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
