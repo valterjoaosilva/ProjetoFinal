@@ -12,20 +12,16 @@ namespace AgendamentoConsultas.Models
 
         public String Nome { get; set; }
        
-        [MaxLength(11)]
         public string Cpf { get; set; }
         public string DataNascimento { get; set; }
         public string Sexo { get; set; }
-        [MaxLength(8)]
         public string Cep { get; set; }
         public string Endereco { get; set; }
         public string Bairro { get; set; }
         public string Complemento { get; set; }
         public string Cidade { get; set; }
         public string Uf { get; set; }
-        [MaxLength(12)]
         public string Telefone { get; set; }
-        [MaxLength(13)]
         public string Celular { get; set; }
         public int ConvenioId { get; set; }
         public Convenio Convenio { get; set; }

@@ -1,5 +1,10 @@
 ﻿
-<form class="form-horizontal" action="/Login/Autentica")" method="post">
+@{
+    Layout = "~/Views/LayoutLogin.cshtml";
+}
+
+
+<form class="form-horizontal" action="/Login/Autentica" method="post">
     <fieldset>
         <!-- Form Name -->
 
@@ -11,7 +16,7 @@
                 <input id="login" name="login" type="text" placeholder="Entre com o Login" class="form-control input-md" required="">
             </div>
         </div>
-        
+
         <!-- Password input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="senha">Senha</label>
@@ -22,9 +27,9 @@
 
 
 
-     
-        
-                <!-- Button -->
+
+
+        <!-- Button -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="singlebutton">Gravar</label>
             <div class="col-md-4">
@@ -32,9 +37,7 @@
             </div>
         </div>
     </fieldset>
-
-
-
+   </form>
 
 
 

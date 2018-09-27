@@ -1776,6 +1776,10 @@
     <Compile Include="Migrations\20180925171511_medico.designer.cs">
       <DependentUpon>20180925171511_medico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20180927192546_mudancaPacientes.cs" />
+    <Compile Include="Migrations\20180927192546_mudancaPacientes.designer.cs">
+      <DependentUpon>20180927192546_mudancaPacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ClinicaContextModelSnapshot.cs" />
     <Compile Include="Models\Convenio.cs" />
     <Compile Include="Models\Medico.cs" />
@@ -1816,6 +1820,8 @@
     <Content Include="Views\Especialidade\Form.cshtml" />
     <Content Include="Views\Paciente\ViewEditar.cshtml" />
     <Content Include="Views\Convenio\ViewEditar.cshtml" />
+    <Content Include="Views\LayoutLogin.cshtml" />
+    <Content Include="Views\Paciente\Form.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

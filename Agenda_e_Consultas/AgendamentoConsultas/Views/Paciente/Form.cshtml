@@ -1,5 +1,5 @@
 ﻿
-<form class="form-horizontal" action="@Url.Action("Editar","Paciente", new { @ViewBag.Paciente.Id})" method="post">
+<form class="form-horizontal" action="@Url.Action("Adiciona","Paciente")" method="post">
     <fieldset>
         <!-- Form Name -->
         <legend>Cadastro de Pacientes</legend>
@@ -8,7 +8,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="nome">Nome</label>
             <div class="col-md-5">
-                <input id="nome" value="@ViewBag.Paciente.Nome" name="paciente.nome" type="text" placeholder="Entre com o Nome" class="form-control input-md" required="">
+                <input id="nome" name="paciente.nome" type="text" placeholder="Entre com o Nome" class="form-control input-md" required="">
             </div>
         </div>
 
@@ -16,7 +16,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="cpf">CPF</label>
             <div class="col-md-5">
-                <input id="cpf" value="@ViewBag.Paciente.cpf" type="text" placeholder="Numero do CPF" class="form-control input-md">
+                <input id="cpf" name="paciente.cpf" type="text" placeholder="Numero do CPF" class="form-control input-md">
 
             </div>
         </div>
@@ -24,7 +24,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="datanascimento">Data de Nascimento</label>
             <div class="col-md-4">
-                <input id="datanascimento" value="@ViewBag.Paciente.datanascimento" type="text" placeholder="dd/mm/yyyy" class="form-control input-md">
+                <input id="datanascimento" name="paciente.datanascimento" type="text" placeholder="dd/mm/yyyy" class="form-control input-md">
 
             </div>
         </div>
@@ -32,7 +32,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="sexo">Sexo</label>
             <div class="col-md-4">
-                <select id="sexo" value="@ViewBag.Paciente.sexo" class="form-control">
+                <select id="sexo" name="paciente.sexo" class="form-control">
                     <option value="F">Feminino</option>
                     <option value="M">Masculino</option>
                 </select>
@@ -42,7 +42,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="cep">CEP</label>
             <div class="col-md-4">
-                <input id="cep" value="@ViewBag.Paciente.cep" type="text" placeholder="99999-999" class="form-control input-md">
+                <input id="cep" name="paciente.cep" type="text" placeholder="99999-999" class="form-control input-md">
 
             </div>
         </div>
@@ -50,7 +50,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="endereco">Endereco</label>
             <div class="col-md-8">
-                <input id="endereco" value="@ViewBag.Paciente.endereco" type="text" placeholder="Rua Numero Complemento" class="form-control input-md">
+                <input id="endereco" name="paciente.endereco" type="text" placeholder="Rua Numero Complemento" class="form-control input-md">
 
             </div>
         </div>
@@ -58,7 +58,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="bairro">Bairro</label>
             <div class="col-md-5">
-                <input id="bairro" value="@ViewBag.Paciente.bairro" type="text" placeholder="Bairro" class="form-control input-md">
+                <input id="bairro" name="paciente.bairro" type="text" placeholder="Bairro" class="form-control input-md">
 
             </div>
         </div>
@@ -66,14 +66,14 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="complemento">Complemento</label>
             <div class="col-md-5">
-                <input id="Complemento" value="@ViewBag.Paciente.complemento" type="text" placeholder="Complemento" class="form-control input-md">
+                <input id="Complemento" name="paciente.complemento" type="text" placeholder="Complemento" class="form-control input-md">
             </div>
         </div>
         <!-- Text input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="cidade">Cidade</label>
             <div class="col-md-6">
-                <input id="cidade" value="@ViewBag.Paciente.cidade" type="text" placeholder="Cidade" class="form-control input-md">
+                <input id="cidade" name="paciente.cidade" type="text" placeholder="Cidade" class="form-control input-md">
 
             </div>
         </div>
@@ -81,14 +81,14 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="uf">UF</label>
             <div class="col-md-2">
-                <input id="uf" value="@ViewBag.Paciente.uf" type="text" placeholder="Estado" class="form-control input-md">
+                <input id="uf" name="paciente.uf" type="text" placeholder="Estado" class="form-control input-md">
             </div>
         </div>
         <!-- Text input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="telefone">Telefone</label>
             <div class="col-md-4">
-                <input id="telefone" value="@ViewBag.Paciente.telefone" type="text" placeholder="(99)999999999" class="form-control input-md">
+                <input id="telefone" name="paciente.telefone" type="text" placeholder="(99)999999999" class="form-control input-md">
 
             </div>
         </div>
@@ -96,7 +96,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="celular">Celular</label>
             <div class="col-md-4">
-                <input id="celular" value="@ViewBag.Paciente.celular" type="text" placeholder="(99)999999999" class="form-control input-md">
+                <input id="celular" name="paciente.celular" type="text" placeholder="(99)999999999" class="form-control input-md">
 
             </div>
         </div>
@@ -104,13 +104,13 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="convenio médico">Convenio Medico</label>
             <div class="col-md-4">
-                <select id="conveniomedico" value="@ViewBag.Paciente.convenioId" type="text" placeholder="Digite Convenio Medico" class="form-control">
+                <select id="conveniomedico" name="paciente.convenioId" type="text" placeholder="Digite Convenio Medico" class="form-control">
                     @{
-                        foreach (var convenio in ViewBag.Convenios)
-                        {
-                            <option value="@convenio.Id">@convenio.ConvenioNome</option>
+                            foreach (var convenio in ViewBag.Convenios)
+                            {
+                                <option value="@convenio.Id">@convenio.ConvenioNome</option>
+                            }
                         }
-                    }
 
                 </select>
 
@@ -120,7 +120,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="email">Email</label>
             <div class="col-md-4">
-                <input id="email" value="@ViewBag.Paciente.email" type="text" placeholder="Digite seu E-mail" class="form-control input-md">
+                <input id="email" name="paciente.email" type="text" placeholder="Digite seu E-mail" class="form-control input-md">
 
             </div>
         </div>
@@ -128,7 +128,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="senha">Senha</label>
             <div class="col-md-4">
-                <input id="senha" value="@ViewBag.Paciente.senha" type="password" placeholder="Entre com a Senha" class="form-control input-md" required="">
+                <input id="senha" name="paciente.senha" type="password" placeholder="Entre com a Senha" class="form-control input-md" required="">
 
             </div>
         </div>
@@ -136,7 +136,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="confirmasenha">Confirma Senha</label>
             <div class="col-md-4">
-                <input id="confirmasenha" value="@ViewBag.Paciente.ConfirmarSenha" type="password" placeholder="Confirme a Senha" class="form-control input-md">
+                <input id="confirmasenha" name="paciente.ConfirmarSenha" type="password" placeholder="Confirme a Senha" class="form-control input-md">
 
             </div>
         </div>

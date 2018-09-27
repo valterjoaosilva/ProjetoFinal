@@ -48,5 +48,13 @@ namespace AgendamentoConsultas.DAO
                 contexto.SaveChanges();
             }
         }
+
+        public Paciente Busca(string login,string senha)
+        {
+            using (var contexto = new ClinicaContext())
+            {
+                return contexto.Pacientes.FirstOrDefault(u => u.Nome == login && u.Senha == senha);
+            }
+        }
     }
 }

@@ -13,12 +13,21 @@ namespace AgendamentoConsultas.Controllers
         // GET: Pacientes
         public ActionResult Index(Paciente paciente)
         {
+            PacienteDAO dao = new PacienteDAO();
+            ViewBag.Pacientes = dao.Lista();
+
+            ConvenioDAO convDao = new ConvenioDAO();
+            ViewBag.Convenios = convDao.Lista();
+            return View();
+        }
+
+        public ActionResult Form()
+        {
             ConvenioDAO dao = new ConvenioDAO();
             ViewBag.Convenios = dao.Lista();
 
             return View();
         }
-
       
         public ActionResult Adiciona(Paciente paciente)
         {
@@ -26,7 +35,7 @@ namespace AgendamentoConsultas.Controllers
             PacienteDAO dao = new PacienteDAO();
             dao.Adiciona(paciente);
 
-            return RedirectToAction("Index", "Pacientes");
+            return RedirectToAction("Index", "Paciente");
 
         }
         
@@ -39,7 +48,7 @@ namespace AgendamentoConsultas.Controllers
             Paciente paciente = dao.BuscaPorId(id);
             dao.Remover(paciente);
 
-            return RedirectToAction("Index", "Pacientes");
+            return RedirectToAction("Index", "Paciente");
         }
 
         public ActionResult ViewEditar(int id)

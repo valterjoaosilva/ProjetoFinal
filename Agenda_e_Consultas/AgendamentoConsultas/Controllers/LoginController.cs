@@ -8,7 +8,7 @@ using AgendamentoConsultas.DAO;
 
 namespace AgendamentoConsultas.Controllers
 {
-    public class UsuarioController : Controller
+    public class LoginController : Controller
     {
         // GET: Usuario
         public ActionResult Index()
@@ -30,6 +30,6 @@ namespace AgendamentoConsultas.Controllers
                 return RedirectToAction("index");
             }
         }
-        
+
     }
 }
