@@ -1743,9 +1743,8 @@
     <Compile Include="Controllers\CadastroAcessoController.cs" />
     <Compile Include="Controllers\ConvenioController.cs" />
     <Compile Include="Controllers\EspecialidadeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
-    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="DAO\ConvenioDAO.cs" />
     <Compile Include="DAO\EspecialidadesDAO.cs" />
     <Compile Include="Controllers\homeController.cs" />
@@ -1753,6 +1752,7 @@
     <Compile Include="DAO\ClinicaContext.cs" />
     <Compile Include="DAO\MedicosDAO.cs" />
     <Compile Include="DAO\PacienteDAO.cs" />
+    <Compile Include="DAO\UsuariosDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1808,7 +1808,7 @@
     <Content Include="Views\Medico\Form.cshtml" />
     <Content Include="Views\Medico\Adiciona.cshtml" />
     <Content Include="Views\Especialidade\Index.cshtml" />
-    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Views\Convenio\Form.cshtml" />
     <Content Include="Views\Convenio\Index.cshtml" />
     <Content Include="Views\Medico\ViewEditar.cshtml" />
@@ -1825,7 +1825,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

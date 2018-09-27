@@ -10,14 +10,9 @@ namespace AgendamentoConsultas.Models
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-
-        [MaxLength(11)]
-        public string Cpf { get; set; }
         public string Senha { get; set; }
 
-        public bool Atendente { get; set; }
+      
         
-
-        //rg, endereco
     }
 }

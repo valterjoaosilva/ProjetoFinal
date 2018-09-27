@@ -295,3 +295,8 @@ C:\Users\V008\Desktop\ProjetoFinal\Agenda_e_Consultas\AgendamentoConsultas\bin\S
 C:\Users\V008\Desktop\ProjetoFinal\Agenda_e_Consultas\AgendamentoConsultas\bin\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\V008\Desktop\ProjetoFinal\Agenda_e_Consultas\AgendamentoConsultas\bin\Microsoft.EntityFrameworkCore.Design.xml
 C:\Users\V008\Desktop\ProjetoFinal\Agenda_e_Consultas\AgendamentoConsultas\obj\Debug\AgendamentoConsultas.dll.config
+C:\Users\Valter\Desktop\ProjetoFinal\Agenda_e_Consultas\AgendamentoConsultas\obj\Debug\AgendamentoConsultas.csprojAssemblyReference.cache
+C:\Users\Valter\Desktop\ProjetoFinal\Agenda_e_Consultas\AgendamentoConsultas\obj\Debug\AgendamentoConsultas.dll.config
+C:\Users\Valter\Desktop\ProjetoFinal\Agenda_e_Consultas\AgendamentoConsultas\obj\Debug\AgendamentoConsultas.csproj.CoreCompileInputs.cache
+C:\Users\Valter\Desktop\ProjetoFinal\Agenda_e_Consultas\AgendamentoConsultas\obj\Debug\AgendamentoConsultas.dll
+C:\Users\Valter\Desktop\ProjetoFinal\Agenda_e_Consultas\AgendamentoConsultas\obj\Debug\AgendamentoConsultas.pdb
